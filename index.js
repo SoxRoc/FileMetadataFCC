@@ -1,6 +1,12 @@
 var express = require('express');
 var cors = require('cors');
 require('dotenv').config()
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
+
+//npm i multer Make sure to run to install multer
 
 var app = express();
 
